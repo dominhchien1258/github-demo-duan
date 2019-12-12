@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind|Muli&display=swap" rel="stylesheet">
+    <title>Sub category</title>
+    <link rel="stylesheet" href="./css/category.css">
+</head>
+<body>
+    <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-11-2019/Header_1263x80.png" alt=""
+        style="width: 100%;">
+    <div id="main-body">
+        <header>
+            <div id="header-content">
+                    <div id="header-content">
+                            <div style="width: 10%;">
+                                <a href="./index.html"><img style="width: 190%;height: auto"
+                                    src="https://iweb.tatthanh.com.vn/pic/3/blog/images/logo-sach(1).jpg"
+                                        title="Quay về trang chủ" id="logo"></a>
+                            </div>
+
+                <div id="div-search-form">
+                        <form class="example" onsubmit="searchBook()">
+                            <input type="text" placeholder="Search.." id="input">
+                            <button id="search-btn" type="submit"><i class="fa fa-search"></i>Tìm kiếm</button>
+                        </form>
+                    </div>
+
+
+
+                <div id="div-shop-cart">
+                    <a href="./giohang.html"><button type="button" id="btn-cart"><i class="fa fa-shopping-cart">Giỏ
+                                hàng</i><span style="background-color:yellow;padding:4px 6px;margin-left: 2px;color: black;" id="amount-cart"></span></button>
+                    </a>
+                </div>
+            </div>
+
+        </header>
+        <div id="background-content" style="background-color: #f0f0f0">
+            <div id="main-content">
+
+                <ul id="menu" style="font-size: 25px;">
+                    <li><a href='./index.html'>Trang chủ<a></li>
+                    <li><a href='./category.html' onclick="goToCategory(this)">Kỹ năng<i class="fa fa-angle-down"></i>
+                            <ul class="submenu">
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Kỹ năng sống<a></li>
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Tâm lý<a></li>
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Rèn luyện nhân cách<a>
+                                </li>
+                            </ul>
+                            <a></li>
+                    <li><a href='./category.html' onclick="goToCategory(this)">Văn học<i class="fa fa-angle-down"></i>
+                            <ul class="submenu">
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Tiểu thuyết<a></li>
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Ngôn tình<a></li>
+                            </ul>
+                            <a></li>
+                    <li><a href='./category.html' onclick="goToCategory(this)">Kinh tế<i class="fa fa-angle-down"></i>
+                            <ul class="submenu">
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Marketing<a></li>
+                                    <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Nhân vật-Bài học kinh doanh<a></li>
+                            </ul>
+                            <a></li>
+
+
+
+                </ul>
+        <div id="content"  style="background-color:white;padding: 10px;"><span style="font-size: 40px;" id="category-big-name"></span><span style="font-size: 35px;" id="category-name"></span><br>
+                <select  id="select" onchange="filter()" title="Sắp xếp sản phẩm">
+                        <option>Theo mặc định</option>
+                        <option>Theo A - Z</option>
+                        <option>Theo Z - A</option>
+                        <option>Giá thấp đến cao</option>
+                        <option>Giá cao đến thấp</option>
+                    </select>
+                    <div id="clear"></div>
+                <div id="container">
+                  
+                </div>
+        </div>
+        <footer>
+            <div id="footer-content" style="padding-left:1%;">
+                <h4 style="color: green">THÔNG TIN LIÊN HỆ</h4>
+                <p style="color: red;font-size: 20px"><i class="fa fa-phone"></i> Hotline đặt hàng: 0968542989</p>
+                    <p>(Miễn phí, 8h-21h các ngày)</p>
+                    <p style="font-size: 20px"><i class="fa fa-home"></i>389 Bà Triệu, Hai Bà Trưng, Hà Nội</p>
+                    <p style="font-size: 20px"><i class="fa fa-envelope-open"></i><a href="#"
+                            style="text-decoration: none;color: black;">dominhchien1258@gmail.com</a></p>
+                    <p style="text-align: center;">© 2019 - Bản quyền thuộc Đỗ Minh Chiến</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./javascript/listBooks.js"></script>
+    <script src="./javascript/subcategory.js"></script>
+    
+</body>
+</html>

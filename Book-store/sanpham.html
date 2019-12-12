@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="./css/sanpham.css">
+</head>
+
+<body>
+
+    <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-11-2019/Header_1263x80.png" alt=""
+        style="width: 100%;">
+    <div id="main-body">
+        <header>
+            <div id="header-content">
+                    <div id="header-content">
+                            <div style="width: 10%;">
+                                <a href="./index.html"><img style="width: 190%;height: auto"
+                                    src="https://iweb.tatthanh.com.vn/pic/3/blog/images/logo-sach(1).jpg"
+                                        title="Quay về trang chủ" id="logo"></a>
+                            </div>
+
+                <div id="div-search-form">
+                        <form class="example" onsubmit="searchBook()">
+                            <input type="text" placeholder="Search.." id="input">
+                            <button id="search-btn" type="submit"><i class="fa fa-search"></i>Tìm kiếm</button>
+                        </form>
+                    </div>
+
+
+
+                <div id="div-shop-cart">
+                    <a href="./giohang.html"><button type="button" id="btn-cart"><i class="fa fa-shopping-cart">Giỏ
+                        hàng</i><span style="background-color:yellow;padding:4px 6px;margin-left: 2px;color: black;" id="amount-cart"></span></button>
+            </a>
+
+                </div>
+            </div>
+
+        </header>
+        <div id="background-content" style="background-color: #f0f0f0">
+            <div id="main-content">
+
+                <ul id="menu" style="font-size: 25px;">
+                    <li><a href='./index.html'>Trang chủ<a></li>
+                    <li><a href='./category.html' onclick="goToCategory(this)">Kỹ năng<i class="fa fa-angle-down"></i>
+                            <ul class="submenu">
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Kỹ năng sống<a></li>
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Tâm lý<a></li>
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Rèn luyện nhân cách<a>
+                                </li>
+                            </ul>
+                            <a></li>
+                    <li><a href='./category.html' onclick="goToCategory(this)">Văn học<i class="fa fa-angle-down"></i>
+                            <ul class="submenu">
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Tiểu thuyết<a></li>
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Ngôn tình<a></li>
+                            </ul>
+                            <a></li>
+                    <li><a href='./category.html' onclick="goToCategory(this)">Kinh tế<i class="fa fa-angle-down"></i>
+                            <ul class="submenu">
+                                <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Marketing<a></li>
+                                    <li><a href='./subcategory.html' onclick="goToSubCategory(this)">Nhân vật-Bài học kinh doanh<a></li>
+                            </ul>
+                            <a></li>
+
+
+
+                </ul>
+
+                <div id="content" >
+                    <div id="container" style="background-color: white;padding: 15px;">
+                        <div id="left">
+                            <img src="" title="" id="img" style="height: 400px;margin: 20px 50px;">
+                        </div>
+                        <div id="right">
+                            <h1 id="name"></h1>
+                            <p>Tác giả: <a href="#" id="author" style="text-decoration: none;"></a></p>
+                            <p>Nhà xuất bản: <a href="#" id="nxb" style="text-decoration: none;"></a></p>
+                            <p>Giá : <span id="price-sale" style="font-weight: bold;color: red"></span></p>
+                            <div>
+                                <p style="font-size:17px;color: #666363">Tiết kiệm : <span id="sale"></span></p>
+                                <p style="font-size:17px;color: #666363">Giá thị trường: <span id="price"></span></p>
+                            </div>
+                            <p id="a"><span id="intro"></span><button style="border: none; background-color:white; color: rgb(0, 140, 255) " id="readmore-btn" onclick="readmore()">Xem
+                                    tất cả</button></p>
+
+                            <div id="clear"></div>
+                            Số lượng:
+                            <input style="text-align: center;" type="number" id="quality" min="1" value="1" max="30" onchange="changed(this)">
+                            <button id="btn" onclick="add()"><i class="fa fa-cart-plus" style="font-size: 30px;"></i> Thêm vào giỏ hàng</button>
+                            <p id="vertify" style="color:darkgoldenrod">Sản phẩm đã được thêm vào giỏ hàng</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <h3 style="height: 60px ">                                                    </h3>
+                        <div style="background-color: white;">
+                                <h3>Thông tin chi tiết</h3>
+                               
+                                <table style="margin-left: 20px;border: 1px solid #ddd;">
+                                    <tr>
+                                        <td class="left-table">Tác giả</td>
+                                        <td id="infor-tacgia" class="right-table"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left-table">Năm xuất bản</td>
+                                        <td id="infor-namxb" class="right-table"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left-table">Loại bìa</td>
+                                        <td id="infor-loaibia" class="right-table"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left-table">Số trang</a></td>
+                                        <td id="infor-sotrang" class="right-table"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left-table">Nhà xuất bản</a></td>
+                                        <td id="infor-nhaxb" class="right-table"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left-table">Kích thước</a></td>
+                                        <td id="infor-kichthuoc" class="right-table"></td>
+                                    </tr>
+                                </table>
+                                <br>
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div style="background-color: white;">
+                        <h3>Một số sách bạn có thể thích</h3>
+                        <div id="random-container">
+
+                        </div>
+                    </div>
+                </div>
+              
+                    
+                <footer>
+                        <div id="footer-content" style="padding-left:1%;">
+                            <h4 style="color: green">THÔNG TIN LIÊN HỆ</h4>
+                            <p style="color: red;font-size: 20px"><i class="fa fa-phone"></i> Hotline đặt hàng: 0968542989</p>
+                    <p>(Miễn phí, 8h-21h các ngày)</p>
+                    <p style="font-size: 20px"><i class="fa fa-home"></i>389 Bà Triệu, Hai Bà Trưng, Hà Nội</p>
+                    <p style="font-size: 20px"><i class="fa fa-envelope-open"></i><a href="#"
+                            style="text-decoration: none;color: black;">dominhchien1258@gmail.com</a></p>
+                    <p style="text-align: center;">© 2019 - Bản quyền thuộc Đỗ Minh Chiến</p>
+                        </div>
+                    </footer>
+            </div>
+            </div>
+            <script src="./javascript/listBooks.js"></script>
+            <script src="./javascript/sanpham.js"></script>
+</body>
+
+</html>
